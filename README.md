@@ -18,11 +18,12 @@ Push your code with **explicit** commit messages.
 
 ### -------- Iteration 2 --------
 
-- create the hbs layout with the minimal markup
+
 - create a .env file containing: 
   - PORT = 3030
   - MONGO_URI = mongodb://localhost/dev-squad-806
 - create /app.js, just print a "hello, world" message 
+- create the hbs layout with the minimal markup
 - add a dev script in package.json to launch the server
 
 ### -------- Iteration 3 --------
@@ -46,7 +47,7 @@ Push your code with **explicit** commit messages.
 ### -------- Iteration 4 --------
 
 - create /config/mongodb.js 
-- use the [Mongoose Introduction](https://my.ironhack.com/lms/courses/course-v1:IRONHACK+WDFT+202006_PAR/units/ironhack-course-chapter_4-sequential_3-vertical?target=_blank) 
+- use the [Mongoose Introduction](https://my.ironhack.com/lms/courses/course-v1:IRONHACK+WDFT+202006_PAR/units/ironhack-course-chapter_4-sequential_3-vertical) 
 - connect to the database
 - you can test your file separately with nodemon
 
