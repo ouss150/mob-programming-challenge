@@ -40,13 +40,13 @@ Push your code with **explicit** commit messages.
 - /models
 - /config
 
-- visit [unsplash.com](https://unsplash.com/) to find 3 nice coding related image
+- visit [unsplash.com](https://unsplash.com/) to find 3 nice coding related images
 - download them in the appropriate folder
 
 ### -------- Iteration 4 --------
 
 - create /config/mongodb.js 
-- use the [Mongoose Introduction](https://preview.my.ironhack.com/lms/courses/course-v1:IRONHACK+WDFT+202006_PAR/units/ironhack-course-chapter_4-sequential_3-vertical) 
+- use the [Mongoose Introduction](https://my.ironhack.com/lms/courses/course-v1:IRONHACK+WDFT+202006_PAR/units/ironhack-course-chapter_4-sequential_3-vertical?target=_blank) 
 - connect to the database
 - you can test your file separately with nodemon
 
