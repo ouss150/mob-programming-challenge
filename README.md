@@ -12,15 +12,15 @@ Each team must push the code**regularly**, with explicit commits.
 ### -------- Iteration 1 --------
 
 - install hbs express mongoose
-- create the folders + files structure
+- create the folders + files structure:
 - /views
--- /partials
+ - /partials
 - /public
--- /assets
----- /img
----- /video
--- /css
--- /js
+ - /assets
+  - /img
+  - /video
+  - /css
+ - /js
 - /models
 - /config
 
@@ -37,8 +37,8 @@ Each team must push the code**regularly**, with explicit commits.
 - create some files
 - create the hbs layout
 - add an index.css with some really basic styling (use the provided code @ day-3)
-- visit unsplash.com and download 3 nice coding related image
-- include fontawesome to the layout
+- visit [unsplash.com](https://unsplash.com/) and download 3 nice coding related image
+- include [fontawesome](https://fontawesome.com/) to the layout
 
 ### -------- Iteration 4 --------
 
