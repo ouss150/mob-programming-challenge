@@ -9,7 +9,7 @@ The challenge includes several iterations.
 Each team is responsible for one iteration.  
 Each team must push the code**regularly**, with explicit commits.
 
--------- 1 --------
+### -------- Iteration 1 --------
 
 - install hbs express mongoose
 - create the folders + files structure
@@ -25,22 +25,22 @@ Each team must push the code**regularly**, with explicit commits.
 - /config
 
 
--------- 2 --------
+### -------- Iteration 2 --------
 
 - install dotenv
 - create a .env file containing PORT = 3030, MONGO_URI = mongodb://- localhost/dev-squad-806
 - create a mongodb.js file in /config
-- use the Mongoose Introduction course to connect to the database
+- use the [Mongoose Introduction](https://preview.my.ironhack.com/lms/courses/course-v1:IRONHACK+WDFT+202006_PAR/units/ironhack-course-chapter_4-sequential_3-vertical) and connect to the database
 
--------- 3 --------
+### -------- Iteration 3 --------
 
 - create some files
--- the hbs layout
--- an index css with some really basic styling
+- create the hbs layout
+- add an index.css with some really basic styling (use the provided code @ day-3)
 - visit unsplash.com and download 3 nice coding related image
 - include fontawesome to the layout
 
--------- 4 --------
+### -------- Iteration 4 --------
 
 - create the app's routes
 /                     (renders home)
@@ -51,8 +51,9 @@ Each team must push the code**regularly**, with explicit commits.
 - create the related view, with only a title
 
 
--------- 5 (3 teams at the same time working on different files (watchout the conflicts)) --------
+### -------- Iteration 5  --------
 
+Here 3 teams are working at the same time on different files (beware the conflicts :)
 upgrade the views : 
 
 - home : 
@@ -72,13 +73,13 @@ upgrade the views :
 ---- ironhacker-favorite-langage
 
 
--------- 6 --------
+### -------- Iteration 6 --------
 
 add a models folder a the project's root
 create a new file models/User.js
 
 
--------- 7 --------
+### -------- Iteration 7 --------
 
 When done, everybody should pull the last version
 We'll finish the app together
