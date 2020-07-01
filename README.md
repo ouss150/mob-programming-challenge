@@ -14,8 +14,18 @@ Push your code with **explicit** commit messages.
 
 - initialize the folder for npm
 - install hbs express mongoose dotenv
+- add a .gitignore file excluding the node modules and .env
 
 ### -------- Iteration 2 --------
+
+- create the hbs layout with the minimal markup
+- create a .env file containing: 
+  - PORT = 3030
+  - MONGO_URI = mongodb://localhost/dev-squad-806
+- create /app.js, just print a "hello, world" message 
+- add a dev script in package.json to launch the server
+
+### -------- Iteration 3 --------
 
 - create the folders + files structure:
 - /views
@@ -32,15 +42,6 @@ Push your code with **explicit** commit messages.
 
 - visit [unsplash.com](https://unsplash.com/) to find 3 nice coding related image
 - download them in the appropriate folder
-
-### -------- Iteration 3 --------
-
-- create the hbs layout with the minimal markup
-- create a .env file containing: 
-  - PORT = 3030
-  - MONGO_URI = mongodb://localhost/dev-squad-806
-- create /app.js, just print a "hello, world" message 
-- add a dev script in package.json to launch the server
 
 ### -------- Iteration 4 --------
 
