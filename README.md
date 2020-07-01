@@ -19,8 +19,8 @@ Each team must push the code**regularly**, with explicit commits.
   - /assets
     - /img
     - /video
- - /css
- - /js
+  - /css
+  - /js
 - /models
 - /config
 
@@ -42,11 +42,11 @@ Each team must push the code**regularly**, with explicit commits.
 
 ### -------- Iteration 4 --------
 
-- create the app's routes
-/                     (renders home)
-/my-dev-squad         (renders allUsers)  
-/add-new-ironhacker   (renders formUser)            
-/api/users            (respond an array of user objects)
+- create the app's **get** routes:
+- /                     (renders home)
+- /my-dev-squad         (renders allUsers)  
+- /add-new-ironhacker   (renders formUser)            
+- /api/users            (respond an array of user objects)
 
 - create the related view, with only a title
 
@@ -62,15 +62,15 @@ upgrade the views :
   - images is an array of strings passed as a view parameter
 
 - allUsers : 
--- displays a list of users with a hbs loop
--- users is an array of objects (name, email, favoriteProgLangage) passed as a view parameter
+  - displays a list of users with a hbs loop
+  - users is an array of objects (name, email, favoriteProgLangage) passed as a view parameter
 
 - formUser
--- displays a form with labels and input
--- each input MUST have a name attribute
----- ironhacker-name
----- ironhacker-email
----- ironhacker-favorite-langage
+  - displays a form with labels and input
+  - each input MUST have a name attribute
+    - ironhacker-name
+    - ironhacker-email
+    - ironhacker-favorite-langage
 
 
 ### -------- Iteration 6 --------
