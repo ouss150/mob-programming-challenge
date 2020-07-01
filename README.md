@@ -14,12 +14,12 @@ Each team must push the code**regularly**, with explicit commits.
 - install hbs express mongoose
 - create the folders + files structure:
 - /views
- - /partials
+  - /partials
 - /public
- - /assets
-  - /img
-  - /video
-  - /css
+  - /assets
+    - /img
+    - /video
+ - /css
  - /js
 - /models
 - /config
@@ -57,9 +57,9 @@ Here 3 teams are working at the same time on different files (beware the conflic
 upgrade the views : 
 
 - home : 
--- displays a list of 3 images 
--- the images are displayed with a hbs loop
--- images is an array of strings passed as a view parameter
+  - displays a list of 3 images 
+  - the images are displayed with a hbs loop
+  - images is an array of strings passed as a view parameter
 
 - allUsers : 
 -- displays a list of users with a hbs loop
