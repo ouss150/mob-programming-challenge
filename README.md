@@ -4,15 +4,21 @@
 
 You've been added as a collaborator to a github repo.  
 **Accept** the invite and clone the initial code. 
-You'll be randomly assigned to a **team**.  
-Design who's the **driver** and who's the **navigator**.  
-The challenge includes several iterations.  
-Each team is responsible for one iteration.  
-Each team must push the code**regularly**, with **explicit** commits.
+The challenge includes several **iteration**.  
+You'll be randomly assigned to one of these.
+When your turn comes, you are be the **driver** and the other are the **navigators**.  
+Push your code with **explicit** commit messages.
+
 
 ### -------- Iteration 1 --------
+- iniitialize the folder for GIT
+- link the local repo with the remote repo
+- initialize the folder for npm
+- install hbs express mongoose dotenv
 
-- install hbs express mongoose
+
+### -------- Iteration 2 --------
+
 - create the folders + files structure:
 - /views
   - /partials
@@ -20,67 +26,104 @@ Each team must push the code**regularly**, with **explicit** commits.
   - /assets
     - /img
     - /video
+    - /audio
   - /css
   - /js
 - /models
 - /config
-
-
-### -------- Iteration 2 --------
-
-- install dotenv
-- create a .env file containing PORT = 3030, MONGO_URI = mongodb://- localhost/dev-squad-806
-- create a mongodb.js file in /config
-- use the [Mongoose Introduction](https://preview.my.ironhack.com/lms/courses/course-v1:IRONHACK+WDFT+202006_PAR/units/ironhack-course-chapter_4-sequential_3-vertical) and connect to the database
+- visit [unsplash.com](https://unsplash.com/) to find 3 nice coding related image
+- download them in the appropriate folder
 
 ### -------- Iteration 3 --------
 
-- create some files
-- create the hbs layout
-- add an index.css with some really basic styling (use the provided code @ day-3)
-- visit [unsplash.com](https://unsplash.com/) and download 3 nice coding related image
-- include [fontawesome](https://fontawesome.com/) to the layout
+- create the hbs layout with the minimal markup
+- create a .env file containing: 
+  - PORT = 3030
+  - MONGO_URI = mongodb://localhost/dev-squad-806
+
 
 ### -------- Iteration 4 --------
+
+- create /config/mongodb.js 
+- use the [Mongoose Introduction](https://preview.my.ironhack.com/lms/courses/course-v1:IRONHACK+WDFT+202006_PAR/units/ironhack-course-chapter_4-sequential_3-vertical) 
+- connect to the database
+- you can test your code separately with nodemon
+
+
+### -------- Iteration 5 --------
+
+- create the app.js using the express doc's hello world example
+- include the .env configuration
+- require the database config file ;)
+
+
+### -------- Iteration 6 --------
 
 - create the app's **get** routes:
 - /                     (renders home)
 - /my-dev-squad         (renders allUsers)  
 - /add-new-ironhacker   (renders formUser)            
-- /api/users            (respond an array of user objects)
+- /api/users            (respond an **hardcoded** array of user objects)
 
-- create the related view, with only a title
+- create the related views, with a html title only
 
 
-### -------- Iteration 5  --------
+### -------- Iteration 7 --------
 
-Here 3 teams are working at the same time on different files (beware the conflicts :)
-upgrade the views : 
+- add an index.css with some **basic** styling (you may use the code provided @ day-3)
 
-- home : 
-  - displays a list of 3 images 
-  - the images are displayed with a hbs loop
-  - images is an array of strings passed as a view parameter
+### -------- Iteration 8 --------
 
-- allUsers : 
+- create a navMain partial to navigate the app (3 links)
+- include [fontawesome](https://fontawesome.com/) in the layout
+- add a home icon to the navMain
+
+
+### -------- Iteration 9 --------
+
+- create an imageGallery view partial (without any styling)
+- imageGallery expects an array of strings as argument
+- the images are displayed with a hbs loop (iterate through **this**)
+
+### -------- Iteration 10  --------
+
+- update home view : 
+  - include the partial imageGallery
+  - the partials argument comes from the route, update app.js accordingly
+
+### -------- Iteration 11  --------
+
+- code the css for the previous partial (imageGallery)
+- locate the file in /public/css/mod.image-gallery.css 
+- use flex OR grid for the job
+- import the css module in index.css
+
+### -------- Iteration 12 --------
+
+- update allUsers view : 
   - displays a list of users with a hbs loop
   - users is an array of objects (name, email, favoriteProgLangage) passed as a view parameter
+  - update app.js accordingly
 
-- formUser
+
+### -------- Iteration 13 --------
+
+- update formUser view : 
   - displays a form with labels and input
   - each input MUST have a name attribute
-    - ironhacker-name
-    - ironhacker-email
-    - ironhacker-favorite-langage
+    - user-name
+    - user-email
+    - user-favorite-langage
 
 
-### -------- Iteration 6 --------
+### -------- Iteration 14 --------
 
 add a models folder a the project's root
 create a new file models/User.js
 
 
-### -------- Iteration 7 --------
+### -------- Iteration 15 --------
 
-When done, everybody should pull the last version
-We'll finish the app together
+When done Squad !
+Everybody should pull the last version
+We will finish the app together, with our first POST request
