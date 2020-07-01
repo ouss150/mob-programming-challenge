@@ -103,11 +103,14 @@ Push your code with **explicit** commit messages.
 - the images are displayed with a hbs loop (iterate through **this**)
 
 
+# **Team splitting starts here **
+
 ### -------- Iteration 10  --------
 
 - modify home view : 
   - **include** the partial imageGallery
  - have a look to the app.get("/") route **before** to pass the partial's widget
+
 
 ### -------- Iteration 11  --------
 
@@ -135,14 +138,22 @@ Push your code with **explicit** commit messages.
     - userFavoriteLangage
 
 
-### -------- Iteration 14 --------
-
-add a models folder a the project's root
-create a new file models/User.js
+### -------- Iteration 14 (and counting :) --------
 
 
-### -------- Iteration 15 --------
+When done Squad !!!
 
-When done Squad !
 Everybody should pull the last version
-We will finish the app together, with our first POST request
+Let's finish the app together with our first POST requests
+
+----->
+
+- add a models folder a the project's root
+- add a new file @ models/User.js
+- add a create route
+- add a detail view with an update form
+- add an update route
+- add a remove button on the hackers list
+- add a delete route
+
+
