@@ -1,13 +1,14 @@
 # mob-programming-challenge
 
-## Hey DevSquad 806, let's git together !
+## Hey DevSquad 806, let's GIT together !
 
 You've been added as a collaborator to a github repo.  
-Accept the invite and clone the initial code. You'll be randomly assigned to a team.  
-Design who's the driver and who's the navigator.  
+**Accept** the invite and clone the initial code. 
+You'll be randomly assigned to a **team**.  
+Design who's the **driver** and who's the **navigator**.  
 The challenge includes several iterations.  
 Each team is responsible for one iteration.  
-Each team must push the code**regularly**, with explicit commits.
+Each team must push the code**regularly**, with **explicit** commits.
 
 ### -------- Iteration 1 --------
 
