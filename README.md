@@ -5,17 +5,15 @@
 You've been added as a collaborator to a github repo.  
 **Accept** the invite and clone the initial code. 
 The challenge includes several **iteration**.  
-You'll be randomly assigned to one of these.
-When your turn comes, you are be the **driver** and the other are the **navigators**.  
+You'll be randomly assigned to one task.
+When your turn comes, you are the **driver** and the other are the **navigators**.  
 Push your code with **explicit** commit messages.
 
 
 ### -------- Iteration 1 --------
-- iniitialize the folder for GIT
-- link the local repo with the remote repo
+
 - initialize the folder for npm
 - install hbs express mongoose dotenv
-
 
 ### -------- Iteration 2 --------
 
@@ -31,6 +29,7 @@ Push your code with **explicit** commit messages.
   - /js
 - /models
 - /config
+
 - visit [unsplash.com](https://unsplash.com/) to find 3 nice coding related image
 - download them in the appropriate folder
 
@@ -40,63 +39,77 @@ Push your code with **explicit** commit messages.
 - create a .env file containing: 
   - PORT = 3030
   - MONGO_URI = mongodb://localhost/dev-squad-806
-
+- create /app.js, just print a "hello, world" message 
+- add a dev script in package.json to launch the server
 
 ### -------- Iteration 4 --------
 
 - create /config/mongodb.js 
 - use the [Mongoose Introduction](https://preview.my.ironhack.com/lms/courses/course-v1:IRONHACK+WDFT+202006_PAR/units/ironhack-course-chapter_4-sequential_3-vertical) 
 - connect to the database
-- you can test your code separately with nodemon
+- you can test your file separately with nodemon
 
 
 ### -------- Iteration 5 --------
 
-- create the app.js using the express doc's hello world example
+- update app.js
 - include the .env configuration
-- require the database config file ;)
+- then, require the database config file ;)
+- then, set the intial config for hbs and public assets
+
+- for the moment, let's **hardcode** a const users (an array objects)
+- each object has 3 properties:
+  - name
+  - email
+  - favorite-langage
+- listen to the PORT stored in .env
+
 
 
 ### -------- Iteration 6 --------
 
 - create the app's **get** routes:
-- /                     (renders home)
-- /my-dev-squad         (renders allUsers)  
-- /add-new-ironhacker   (renders formUser)            
-- /api/users            (respond an **hardcoded** array of user objects)
+- /                         (renders home)
+- /my-dev-squad             (renders allUsers + pass **users** as a parameter to the view)  
+- /add-new-ironhacker       (renders formUser)            
+- bonus: /api/ironhackers   (respond users as a json string :)
 
 - create the related views, with a html title only
 
 
 ### -------- Iteration 7 --------
 
-- add an index.css with some **basic** styling (you may use the code provided @ day-3)
+- add an index.css with some **basic** styling (you may use the code provided @ mod-2/week-1/day-3)
+
 
 ### -------- Iteration 8 --------
 
-- create a navMain partial to navigate the app (3 links)
-- include [fontawesome](https://fontawesome.com/) in the layout
-- add a home icon to the navMain
+- create a navMain **partial** to navigate the app (3 links)
+- include [fontawesome](https://fontawesome.com/) in the **layout**
+- add a home **icon** to the navMain
 
 
 ### -------- Iteration 9 --------
 
-- create an imageGallery view partial (without any styling)
-- imageGallery expects an array of strings as argument
+- create an imageGallery view **partial** (without any styling)
+- imageGallery expects an array of strings as **argument**
+- have a look to the app.get("/") route **before** coding your widget
 - the images are displayed with a hbs loop (iterate through **this**)
+
 
 ### -------- Iteration 10  --------
 
 - update home view : 
-  - include the partial imageGallery
-  - the partials argument comes from the route, update app.js accordingly
+  - **include** the partial imageGallery
+
 
 ### -------- Iteration 11  --------
 
-- code the css for the previous partial (imageGallery)
-- locate the file in /public/css/mod.image-gallery.css 
-- use flex OR grid for the job
+- create /public/css/mod.image-gallery.css 
+- code the styling for the previous partial (imageGallery)
+- advice : use flex OR grid for the job :)
 - import the css module in index.css
+
 
 ### -------- Iteration 12 --------
 
