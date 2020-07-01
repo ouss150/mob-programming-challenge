@@ -49,21 +49,25 @@ Push your code with **explicit** commit messages.
 - create /config/mongodb.js 
 - use the [Mongoose Introduction](https://my.ironhack.com/lms/courses/course-v1:IRONHACK+WDFT+202006_PAR/units/ironhack-course-chapter_4-sequential_3-vertical) 
 - connect to the database
-- you can test your file separately with nodemon
+- you can test your file separately with node
 
 
 ### -------- Iteration 5 --------
 
-- update app.js
+- in app.js
 - include the .env configuration
 - then, require the database config file ;)
 - then, set the intial config for hbs and public assets
 
-- for the moment, let's **hardcode** a const users (an array objects)
-- each object has 3 properties:
-  - name
-  - email
-  - favorite-langage
+- for the moment, let's **hardcode** 2 arrays
+-  A / const **users** (an array objects)
+  - each object has 3 properties:
+    - name
+    - email
+    - favorite-langage
+-  B / const **images** (an array strings)
+    - each string represent the path to an image (see iteration 3)
+
 - listen to the PORT stored in .env
 
 
@@ -71,12 +75,12 @@ Push your code with **explicit** commit messages.
 ### -------- Iteration 6 --------
 
 - create the app's **get** routes:
-- /                         (renders home)
-- /my-dev-squad             (renders allUsers + pass **users** as a parameter to the view)  
-- /add-new-ironhacker       (renders formUser)            
-- bonus: /api/ironhackers   (respond users as a json string :)
+- /                             (renders home  + pass **images** as a view parameter )
+- /my-dev-squad                 (renders allUsers + pass **users** as a view parameter)  
+- /add-new-ironhacker           (renders formUser)            
+- **Bonus**: /api/ironhackers   (respond users as a json string :)
 
-- create the related views, with a html title only
+- create the related views, with a h1 title only
 
 
 ### -------- Iteration 7 --------
@@ -101,9 +105,9 @@ Push your code with **explicit** commit messages.
 
 ### -------- Iteration 10  --------
 
-- update home view : 
+- modify home view : 
   - **include** the partial imageGallery
-
+ - have a look to the app.get("/") route **before** to pass the partial's widget
 
 ### -------- Iteration 11  --------
 
@@ -115,20 +119,20 @@ Push your code with **explicit** commit messages.
 
 ### -------- Iteration 12 --------
 
-- update allUsers view : 
-  - displays a list of users with a hbs loop
-  - users is an array of objects (name, email, favoriteProgLangage) passed as a view parameter
-  - update app.js accordingly
+- modify allUsers view : 
+  - displays a list of **users** with a hbs loop
+  - **users** is an array of objects (name, email, favoriteProgLangage) passed as a view parameter
+  - have a look to the app.get(" /my-dev-squad") route !!!
 
 
 ### -------- Iteration 13 --------
 
-- update formUser view : 
+- modify formUser view : 
   - displays a form with labels and input
-  - each input MUST have a name attribute
-    - user-name
-    - user-email
-    - user-favorite-langage
+  - each input MUST have a name attribute (check @mdn)
+    - userName
+    - userEmail
+    - userFavoriteLangage
 
 
 ### -------- Iteration 14 --------
