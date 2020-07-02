@@ -11,9 +11,34 @@ hbs.registerPartials(__dirname + "/views/partials");
 
 const users = [
   {
-    name: "Bill",
-    email: "bill@bill.bill",
+    name: "Doug Crockford",
+    email: "doug@wwwrrrld.com",
     favoriteLangage: "JS",
+  },
+  {
+    name: "Jill Fresh",
+    email: "bill@bill.bill",
+    favoriteLangage: "CSS",
+  },
+  {
+    name: "Tina Hype",
+    email: "tina@hipster.io",
+    favoriteLangage: "Go",
+  },
+  {
+    name: "Lou Fast",
+    email: "gonna@getsome.org",
+    favoriteLangage: "Rust",
+  },
+  {
+    name: "Jim Struggles",
+    email: "intern@corporate.biz",
+    favoriteLangage: "Java",
+  },
+  {
+    name: "Kim Brain",
+    email: "functor@monad.dev",
+    favoriteLangage: "Haskel",
   },
 ];
 
