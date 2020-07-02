@@ -1,7 +1,12 @@
 <h1> Display users</h1>
 
-<ul>
+<ul class="list users">
     {{#each users}}
-        <li>{{this.name}} <br> {{this.email}} <br> {{this.favoriteLanguage}}</li>
+    <li class="item">
+        {{this.name}} <br> {{this.email}} <br> {{this.favoriteLanguage}}
+        {{!-- link (a) are ALLWAYS TRIGGERING A GET METHOD --}}
+        <a class="fa fa-times fa-lg" href="/delete-ironhacker/{{this._id}}">
+        </a>
+    </li>
     {{/each}}
 </ul>

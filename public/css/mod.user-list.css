@@ -1,0 +1,11 @@
+.list.users {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.list.users .item {
+  border: 1px solid;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+}
