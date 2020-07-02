@@ -19,6 +19,24 @@ const users = [
 
 const images = ["/img/img1.jpg", "/img/img2.jpg", "/img/img3.jpg"];
 
+app.get("/", (req, res) => {
+  res.render("home", images);
+});
+
+app.get("/my-dev-squad", (req, res) => {
+  res.render("allUsers", users);
+});
+
+app.get("/add-new-ironhacker", (req, res) => {
+  res.render("formUser");
+});
+
+app.get("/api/ironhackers", (req, res) => {
+  res.json(users);
+});
+
+/*  SHOULD BE LAST*/
+
 app.listen(process.env.PORT, () => {
   console.log(`my webste is available at http://localhost:${process.env.PORT}`);
 });
