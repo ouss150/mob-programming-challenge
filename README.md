@@ -143,14 +143,17 @@ Push your code with **explicit** commit messages.
 
 When done Squad !!!
 
-Everybody should pull the last version
-Let's finish the app together with our first POST requests
+Everybody should pull the last version  
+Let's finish the app together  
 
------>
-
+----->  
 - add a models folder a the project's root
 - add a new file @ models/User.js
-- add a create route
+- define our first mongoose Schema
+- create a /bin folder and a seed-users.js file
+- list all hackers @allUsers
+- add a create-hacker **post** route
+- send our first POST request @formUser 
 - add a detail view with an update form
 - add an update route
 - add a remove button on the hackers list
