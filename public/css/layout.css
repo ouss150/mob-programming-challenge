@@ -1,0 +1,26 @@
+#header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: var(--color-dark);
+    height: 120px;
+}
+
+#content-main {
+    position: relative;
+    top: 120px;
+}
+
+#logo {
+    display: inline;
+    max-width: 80px;
+}
+
+#footer-main {
+    position: fixed;
+    bottom: 0;
+}

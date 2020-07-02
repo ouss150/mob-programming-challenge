@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+a:hover {
+    color: var(--color-2);
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    color: var(--color-2);
+}
+
+.title {
+    margin: 10px 0 20px;
+}
+
+.list {
+    padding-left: 20px;
+}
