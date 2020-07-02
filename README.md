@@ -103,7 +103,7 @@ Push your code with **explicit** commit messages.
 - the images are displayed with a hbs loop (iterate through **this**)
 
 
-## **Team splitting starts here **
+## Team splitting starts here !
 
 ### -------- Iteration 10  --------
 
