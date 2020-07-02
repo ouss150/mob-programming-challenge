@@ -9,40 +9,9 @@ app.set("view engine", "hbs");
 app.use(express.static(__dirname + "/public"));
 hbs.registerPartials(__dirname + "/views/partials");
 
-const users = [
-  {
-    name: "Doug Crockford",
-    email: "doug@wwwrrrld.com",
-    favoriteLangage: "JS",
-  },
-  {
-    name: "Jill Fresh",
-    email: "bill@bill.bill",
-    favoriteLangage: "CSS",
-  },
-  {
-    name: "Tina Hype",
-    email: "tina@hipster.io",
-    favoriteLangage: "Go",
-  },
-  {
-    name: "Lou Fast",
-    email: "gonna@getsome.org",
-    favoriteLangage: "Rust",
-  },
-  {
-    name: "Jim Struggles",
-    email: "intern@corporate.biz",
-    favoriteLangage: "Java",
-  },
-  {
-    name: "Kim Brain",
-    email: "functor@monad.dev",
-    favoriteLangage: "Haskel",
-  },
-];
 
 const images = ["/img/img1.jpg", "/img/img2.jpg", "/img/img3.jpg"];
+
 
 app.get("/", (req, res) => {
   res.render("home", { images });
