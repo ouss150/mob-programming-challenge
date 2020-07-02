@@ -1,1 +1,7 @@
 <h1> Display users</h1>
+
+<ul>
+    {{#each users}}
+        <li>{{this.name}} <br> {{this.email}} <br> {{this.favoriteLangage}}</li>
+    {{/each}}
+</ul>
