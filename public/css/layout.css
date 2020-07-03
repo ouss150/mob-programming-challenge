@@ -7,13 +7,13 @@
     width: 100%;
     z-index: 10;
     background: var(--color-dark);
-    height: 120px;
+    height: var(--header-height);
     padding: 5px 20px;
 }
 
 #content-main {
     position: relative;
-    top: 120px;
+    top: var(--header-height);
     padding: 20px 20px 60px 20px;
 }
 
