@@ -3,6 +3,20 @@ const router = new express.Router();
 const PartyModel = require("./../models/Party");
 // since the router's routes are prefixed with /party
 
+function formatPartyInfos(infos) {
+  const { date, theme, name, address, host } = infos;
+  // above : we extracted the key/values pairs out of req body
+  return {
+    date,
+    theme,
+    name,
+    place: {
+      address,
+      host,
+    },
+  };
+}
+
 // the actual path here is /party/all
 router.get("/all", async (req, res) => {
   const parties = await PartyModel.find();
@@ -16,22 +30,13 @@ router.get("/create", (req, res) => {
 });
 
 // the actual path here is /party/:id
-router.get("/:id", (req, res) => {
-  res.render("party/one.hbs");
+router.get("/:id", async (req, res) => {
+  const party = await PartyModel.findById(req.params.id);
+  res.render("party/one.hbs", party);
 });
 
 router.post("/create", (req, res) => {
-  const { date, theme, name, address, host } = req.body;
-  // above : we extracted the key/values pairs out of req body
-  const newParty = {
-    date,
-    theme,
-    name,
-    place: {
-      address,
-      host,
-    },
-  };
+  const newParty = formatPartyInfos(req.body);
   // above : we created an object matching the Party's schema's spec
   PartyModel.create(newParty) // let's insert :)
     .then(() => res.redirect("/party/all"))
@@ -39,8 +44,22 @@ router.post("/create", (req, res) => {
 });
 
 // the actual path here is /party/update/:id
-router.get("/update/:id", (req, res) => {
-  res.render("party/update.hbs");
+router.get("/update/:id", async (req, res) => {
+  const party = await PartyModel.findById(req.params.id);
+  res.render("party/update.hbs", party);
+});
+
+router.post("/update/:id", async (req, res) => {
+  try {
+    await PartyModel.findByIdAndUpdate(
+      req.params.id,
+      formatPartyInfos(req.body)
+    );
+
+    res.redirect("/party/all");
+  } catch (err) {
+    res.json(err);
+  }
 });
 
 // the actual path here is /party/delete/:id
