@@ -6,12 +6,6 @@ const express = require("express");
 const hbs = require("hbs");
 const app = express();
 
-// MODELS
-const UserModel = require("./models/User");
-
-// HARDCODED VALUES
-const images = ["img1.jpg", "img2.jpg", "img3.jpg"];
-
 // PUBLIC ASSETS
 app.use(express.static(__dirname + "/public"));
 
@@ -28,66 +22,26 @@ hbs.registerPartials(__dirname + "/views/partials");
 // var declared with app.locals are accessible in every template file
 app.locals.cohort = "806";
 
+const images = ["img1.jpg", "img2.jpg", "img3.jpg"];
+
 //ROUTES
 app.get("/", (req, res) => {
   const templateData = { images: images };
   res.render("home", templateData);
 });
 
-app.get("/my-dev-squad", (req, res) => {
-  // find all the users stored in users database collection
-  UserModel.find() // this is an asynchronous process...
-    // ... so you MUST wait for the answer ;)
-    .then((dbRes) => res.render("allUsers", { users: dbRes }))
-    .catch((err) => console.error(err)); // and catch eventual
-});
+// INCLUDE ROUTERS
 
-// below an alternative with async/await !!!!
+// first step : require the routers
+const routerAPI = require("./routes/api");
+const routerParty = require("./routes/party");
+const routerUser = require("./routes/user");
 
-// app.get("/my-dev-squad", async (req, res) => {
-//   try {
-//     res.render("allUsers", { users: await UserModel.find() });
-//   } catch (err) {
-//     console.error(err);
-//   }
-// });
-
-// get will serve the page (with the form)
-app.get("/add-new-ironhacker", (req, res) => {
-  res.render("formUser");
-});
-
-// post will receive the informtion from the form
-app.post("/add-new-ironhacker", (req, res) => {
-  console.log(req.body); // will ALLWAYS hold the posted data
-  // use the posted data to insert a new document in users database collection
-  UserModel.create(req.body)
-    .then((dbRes) => res.redirect("/add-new-ironhacker"))
-    .catch((dbErr) => res.send("OH NO AN ERROR OCCURED"));
-});
-
-app.get("/delete-ironhacker/:id", (req, res) => {
-  //console.log(req.params.id);
-  // represent the variable part of the route (here the last segment (:id))
-  // we are using this information just below to remove a user by its ID
-
-  UserModel.findByIdAndRemove(req.params.id)
-    .then((dbRes) => res.redirect("/my-dev-squad"))
-    .catch((dbError) => res.send("OH NOOOO : ERROR while user removal"));
-});
-
-app.get("/my-dev-squad/ironhacker/:id", async (req, res, next) => {
-  try {
-    const ironhacker = await UserModel.findById(req.params.id);
-    res.render("userDetails", ironhacker);
-  } catch (err) {
-    res.send(err);
-  }
-});
-
-app.get("/api/ironhackers", (req, res) => {
-  res.json(users);
-});
+// second step : make the app aware oif those routers
+app.use(`/api`, routerAPI);
+app.use("/party", routerParty); 
+// line above : all the routes are "prefixed" with /party 
+app.use(routerUser);
 
 // SERVER KICKSTART
 /*  THIS SHOULD BE LAST */
