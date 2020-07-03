@@ -15,8 +15,8 @@
 {{#each parties}}
    <li class="item party">
        <h3 class="title small">{{this.name}} ({{this.theme}})</h3>
-       {{!-- Date: <time datetime="{{this.date}}">{{this.date}}</time>  --}}
-       <a class="fas fa-glass-cheers" href="/party/{{this._id}}"></a>
+       Date: <time datetime="{{this.date}}">#{this.date.toDateString()}</time> 
+       <a class="fas fa-laugh-beam fa-lg" href="/party/{{this._id}}"></a>
    </li>
 {{/each}}
 </ul>
