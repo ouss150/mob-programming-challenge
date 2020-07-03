@@ -25,23 +25,25 @@ app.locals.cohort = "806";
 
 const images = ["img1.jpg", "img2.jpg", "img3.jpg"];
 
-//ROUTES
+// BASE ROUTES
+
 app.get("/", (req, res) => {
   const templateData = { images: images };
   res.render("home", templateData);
 });
 
-// INCLUDE ROUTERS
+
+// SPLIT ROUTERS
 
 // first step : require the routers
 const routerAPI = require("./routes/api");
 const routerParty = require("./routes/party");
 const routerUser = require("./routes/user");
 
-// second step : make the app aware oif those routers
+// second step : make the app aware of those routers
 app.use(`/api`, routerAPI);
 app.use("/party", routerParty); 
-// line above : all the routes are "prefixed" with /party 
+// 2 lines above : all the routes are "prefixed" with /party 
 app.use(routerUser);
 
 // SERVER KICKSTART
