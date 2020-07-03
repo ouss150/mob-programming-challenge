@@ -1,0 +1,22 @@
+<h1 class="title">
+    <span>All parties</span>
+    <a href="/party/create" class="link fa fa-plus fa-xs"></a>
+</h1>
+
+{{#unless parties.length }}
+    <p>
+        No planned party yet ...<br>
+        This is outrageous : /<br>
+        <a href="/party/create">let's create one !!!</a>
+    </p>
+{{/unless}}
+
+<ul id="parties" class="list">
+{{#each parties}}
+   <li class="item party">
+       <h3 class="title small">{{this.name}} ({{this.theme}})</h3>
+       {{!-- Date: <time datetime="{{this.date}}">{{this.date}}</time>  --}}
+       <a class="fas fa-glass-cheers" href="/party/{{this._id}}"></a>
+   </li>
+{{/each}}
+</ul>
