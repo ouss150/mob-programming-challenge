@@ -7,6 +7,8 @@
     <label class="label" for="userName">Please submit your username:</label>
     <input class="input" type="text" name="name" id="userName" value="test hacker name">
 
+    <input type="number" name="age" value="25">
+    
     <label class="label" for="userEmail">Please submit your email:</label>
     <input class="input" type="email" name="email" id="userEmail" value="test@test.test">
 
@@ -15,3 +17,22 @@
     
     <input class="btn" type="submit" value="Submit your form !">
 </form>
+
+
+{{!-- 
+important HTML attributes
+
+name => value : key/value pair of the posted data
+    ex: email: georgeabitbol@mdm.com
+    ex: favoriteLanguage: JSON
+
+    above: email and favoriteLanguage are name attributes in thehtml inputs
+
+
+action => which route should we hit server-side
+
+method => which HTTP verb are we using ??? 
+            => with synchronous request 
+                => you only get 2 vers (GET OR POST)
+
+ --}}
