@@ -23,12 +23,10 @@ hbs.registerPartials(__dirname + "/views/partials");
 // var declared with app.locals are accessible in every template file
 app.locals.cohort = "806";
 
-const images = ["img1.jpg", "img2.jpg", "img3.jpg"];
-
 // BASE ROUTES
 
 app.get("/", (req, res) => {
-  const templateData = { images: images };
+  const templateData = { images: ["img1.jpg", "img2.jpg", "img3.jpg"] };
   res.render("home", templateData);
 });
 
