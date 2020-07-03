@@ -1,0 +1,21 @@
+<h1 class="title">user details</h1>
+
+<p>This awesome hacker is called {{name}}</p>
+<p>A real {{favoriteLanguage}} specialist !!!</p>
+<p>You can reach im there : {{email}}</p>
+
+<h2 class="title">Update this hacker</h2>
+<hr>
+
+<form method="post" action="/update-ironhacker/{{_id}}" class="form">
+    <label class="label" for="userName">Please submit your username:</label>
+    <input class="input" type="text" name="name" id="userName" value="{{name}}">
+
+    <label class="label" for="userEmail">Please submit your email:</label>
+    <input class="input" type="email" name="email" id="userEmail" value="{{email}}">
+
+    <label class="label" for="userFavoriteLangage">Favorite programming langage</label>
+    <input class="input" type="text" name="favoriteLanguage" id="userFavoriteLangage" value="{{favoriteLanguage}}">
+
+    <button class="btn">update !</button>
+</form>

@@ -1,0 +1,36 @@
+<h1>new ironhacker!</h1>
+{{!-- 
+    method: is the verb we use to request the server
+    action: is the route we want to reach server-side
+ --}}
+<form method="post" action="/add-new-ironhacker" class="form">
+    <label class="label" for="userName">Please submit your username:</label>
+    <input class="input" type="text" name="name" id="userName" value="test hacker name">
+    
+    <label class="label" for="userEmail">Please submit your email:</label>
+    <input class="input" type="email" name="email" id="userEmail" value="test@test.test">
+
+    <label class="label" for="userFavoriteLangage">Please submit your favorite programming langage:</label>
+    <input class="input" type="text" name="favoriteLanguage" id="userFavoriteLangage" value="JS">
+    
+    <input class="btn" type="submit" value="Submit your form !">
+</form>
+
+
+{{!-- 
+important HTML attributes
+
+name => value : key/value pair of the posted data
+    ex: email: georgeabitbol@mdm.com
+    ex: favoriteLanguage: JSON
+
+    above: email and favoriteLanguage are name attributes in thehtml inputs
+
+
+action => which route should we hit server-side
+
+method => which HTTP verb are we using ??? 
+            => with synchronous request 
+                => you only get 2 vers (GET OR POST)
+
+ --}}
