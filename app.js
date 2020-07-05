@@ -2,6 +2,7 @@ require("dotenv").config(); // .env exposed
 require("./config/mongodb"); // databse connected
 require("./helpers/hbs");
 
+
 // BASE DEPENDENCIES
 const express = require("express");
 const hbs = require("hbs");
