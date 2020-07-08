@@ -28,19 +28,28 @@ app.locals.cohort = "806";
 
 app.get("/", (req, res) => {
   const templateData = { images: ["img1.jpg", "img2.jpg", "img3.jpg"] };
-  res.render("home", templateData);
+  res.render("home", {templateData, js: ["foo"]});
+});
+
+app.get("/bars", (req, res) => {
+  res.render("bars", {
+    pageTitle: "Bars",
+    js: ["form-bar-handler", "api-handler"]
+  });
 });
 
 
 // SPLIT ROUTERS
 
 // first step : require the routers
-const routerAPI = require("./routes/api");
+const routerAPIUser = require("./routes/api.user");
+const routerAPIBar = require("./routes/api.bar");
 const routerParty = require("./routes/party");
 const routerUser = require("./routes/user");
 
 // second step : make the app aware of those routers
-app.use(`/api`, routerAPI);
+app.use("/api/bar", routerAPIBar);
+app.use(`/api/user`, routerAPIUser);
 app.use("/party", routerParty); 
 // 2 lines above : all the routes are "prefixed" with /party 
 app.use(routerUser);
