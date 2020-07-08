@@ -3,13 +3,13 @@ const Schema = mongoose.Schema;
 
 const barSchema = new Schema({
   name: String,
-  address: {
-      streetName: String,
-      streetNumber: Number,
-      city: String,
-      country: String,
-      zipCode: Number,
-  },
+  // address: {
+  //     streetName: String,
+  //     streetNumber: Number,
+  //     city: String,
+  //     country: String,
+  //     zipCode: Number,
+  // },
   description : String
 });
 

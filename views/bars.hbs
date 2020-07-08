@@ -1,11 +1,15 @@
 <h1 class="title">Cool bars</h1>
-
-
+<hr>
+<h2 class="title">create a new bar</h2>
 <div id="form-bar" class="form">
     <label class="label" for="name" class="label">name</label>
     <input class="input" id="name" name="name" type="text" value="foo bar">
     <label class="label" for="description" class="label">description</label>
-     <input class="input" id="description" name="description" type="text" value="best bar ever">
-    {{!-- <textarea class="input" name="description" id="description" value="best bar ever"></textarea> --}}
+    <input class="input" id="description" name="description" type="text" value="best bar ever">
     <button class="btn">ok</button>
 </div>
+
+<hr>
+<h2 class="title">All bars</h2>
+<button id="btn-get-all-bars">get full list</button>
+<ul id="all-bars"></ul>
